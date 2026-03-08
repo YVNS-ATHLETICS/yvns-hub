@@ -171,3 +171,41 @@ a {
     color: #8b949e;
   }
 }
+
+/* YVNS APP OVERRIDES */
+body {
+  background-color: #050505 !important;
+  color: #ffffff !important;
+}
+
+.profile-name {
+  color: #ffffff !important;
+  letter-spacing: 2px;
+}
+
+/* The Buttons */
+.link-button {
+  background-color: #111111 !important;
+  border: 1px solid #333333 !important;
+  color: #ffffff !important;
+  transition: all 0.3s ease !important;
+}
+
+/* The Dynamic Blue Hover Effect */
+.link-button:hover {
+  border-color: #0055ff !important; 
+  box-shadow: 0 0 18px rgba(0, 85, 255, 0.4) !important;
+  transform: translateY(-4px) !important;
+  color: #ffffff !important;
+}
+
+/* Social Icons at the bottom */
+.social-icon {
+  color: #888888 !important;
+  transition: all 0.3s ease !important;
+}
+
+.social-icon:hover {
+  color: #0055ff !important;
+  transform: scale(1.1) !important;
+}
