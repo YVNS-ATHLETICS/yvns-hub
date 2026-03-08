@@ -1,67 +1,70 @@
 /* RESET & FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:wght@400;500;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:wght@400;500&display=swap');
 
-/* YVNS APP UI (HARDCODED DARK MODE) */
+/* YVNS APP UI (SCALED & HARDCODED) */
 body {
-  background-color: #050505;
-  color: #ffffff;
+  background-color: #050505 !important;
+  color: #ffffff !important;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   text-align: center;
   padding: 30px 0;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Mono', monospace !important;
 }
 
 a {
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .container {
   width: 90%;
-  max-width: 450px;
+  max-width: 400px; /* Thinner layout for mobile */
 }
 
 /* PROFILE HEADER */
 .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 90px; /* Shrunk down */
+  height: 90px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 15px;
-  border: 2px solid #222222; /* Dark UI border */
+  margin-bottom: 12px;
+  border: 1px solid #333333;
 }
 
 .name {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 46px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin: 10px 0 5px 0;
-  color: #ffffff;
+  font-family: 'Bebas Neue', Impact, sans-serif !important; /* Forced athletic font */
+  font-size: 32px !important; /* Shrunk down */
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  margin: 10px 0 2px 0 !important;
+  color: #ffffff !important;
 }
 
+/* Formatted like the "STATUS: ACTIVE" website text */
 .description {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 20px;
-  color: #81D4FA; /* The YVNS Blue */
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 35px;
+  font-family: 'Roboto Mono', monospace !important; 
+  font-size: 11px !important; 
+  color: #81D4FA !important; 
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  margin-bottom: 30px !important;
+  font-weight: 500 !important;
 }
 
-/* MAIN BUTTONS (LOG SET VIBE) */
+/* MAIN BUTTONS */
 .links {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .link-button {
@@ -69,68 +72,73 @@ a {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  background-color: #0a0a0a;
-  border: 1px solid #222222;
-  color: #ffffff;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 24px;
-  letter-spacing: 2px;
-  padding: 18px;
-  border-radius: 4px; /* Sharp tech edges */
-  transition: all 0.2s ease-in-out;
+  background-color: #050505 !important;
+  border: 1px solid #333333 !important; /* Thinner tech border */
+  color: #ffffff !important;
+  font-family: 'Bebas Neue', Impact, sans-serif !important;
+  font-size: 18px !important; /* Shrunk down */
+  letter-spacing: 1.5px !important;
+  padding: 14px !important; /* Slimmer button height */
+  border-radius: 2px !important; /* Sharper, industrial edges */
+  transition: all 0.2s ease-in-out !important;
 }
 
 .link-button:hover {
-  background-color: #81D4FA;
-  border-color: #81D4FA;
-  color: #000000;
-  box-shadow: 0 0 15px rgba(129, 212, 250, 0.3);
-  transform: translateY(-2px);
+  background-color: #81D4FA !important;
+  border-color: #81D4FA !important;
+  color: #000000 !important;
+  box-shadow: 0 0 15px rgba(129, 212, 250, 0.2) !important;
+  transform: translateY(-2px) !important;
 }
 
-/* SOCIAL ICONS (FIXED VISIBILITY) */
+.link-button:hover i {
+  color: #000000 !important;
+}
+
+/* SOCIAL ICONS */
 .button-container {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .button-group {
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
 .icon-button {
-  width: 45px;
-  height: 45px;
+  width: 35px; /* Shrunk down */
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: none;
-  border: none;
+  background: none !important;
+  border: none !important;
   cursor: pointer;
-  color: #81D4FA; /* Forces them to be visible blue instantly */
-  font-size: 26px;
-  transition: all 0.2s ease;
+  color: #81D4FA !important; 
+  font-size: 20px !important; /* Shrunk down */
+  transition: all 0.2s ease !important;
 }
 
 .icon-button:hover {
-  color: #ffffff;
-  transform: scale(1.15);
-  filter: drop-shadow(0 0 8px rgba(129, 212, 250, 0.8));
+  color: #ffffff !important;
+  transform: scale(1.1) !important;
+  filter: drop-shadow(0 0 8px rgba(129, 212, 250, 0.5)) !important;
 }
 
 /* FOOTER TEXT */
 .footer {
-  margin-top: 45px;
-  font-size: 11px;
-  color: #444444;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  margin-top: 35px !important;
+  font-size: 10px !important;
+  color: #555555 !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  font-family: 'Roboto Mono', monospace !important;
 }
 
 .copyright {
-  margin-top: 15px;
-  font-size: 10px;
-  color: #333333;
+  margin-top: 10px !important;
+  font-size: 9px !important;
+  color: #333333 !important;
 }
