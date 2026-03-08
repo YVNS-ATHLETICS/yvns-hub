@@ -4,55 +4,75 @@ lang: "en"
 plugins: []
 
 # HTML Title
-title: "YVNS Athletics"
+title: "YVNS Athletics | Victory Hub"
 
-# Avatar image path (This automatically pulls your GitHub profile picture)
+# Avatar image path (Pulls your GitHub profile picture)
 avatar: "https://github.com/yvns-athletics.png"
 
 # Name section text
-name: "YVNS"
+name: "YVNS ATHLETICS"
 
 # Tagline section text
 tagline: >-
-  Gritty. Dark. Entirely focused on the work. 
-  The Founder's Collection | Alpha Access
+  Gritty. Dark. Entirely focused on the work.
 
 # List of links (Your main buttons)
 links:
   - link:
-      icon: "fa-solid fa-dumbbell"
-      text: "YVNS App (Alpha Access)"
-      url: "https://github.com/MatthewYounes/yvns-tracker"
-      alt: "YVNS Tracker App"
-      title: "YVNS Tracker App"
+      icon: "fa-solid fa-cart-shopping"
+      text: "FOUNDER'S COLLECTION" 
+      url: "https://yvnsathletics.com/"
+      alt: "YVNS Website"
+      title: "YVNS Website"
       target: "_blank"
   - link:
-      icon: "fa-solid fa-cart-shopping"
-      text: "Shop Founder's Drop (Coming Soon)"
-      url: "#"
-      alt: "Shop"
-      title: "Shop"
-      target: "_self"
+      icon: "fa-solid fa-clipboard-list"
+      text: "THE ALPHA SURVEY"
+      url: "https://yvns-athletics.github.io/yvns-intel/"
+      alt: "YVNS App Survey"
+      title: "YVNS App Survey"
+      target: "_blank"
+  - link:
+      icon: "fa-brands fa-instagram"
+      text: "INSTAGRAM"
+      url: "https://www.instagram.com/yvnsathletics"
+      alt: "YVNS Instagram"
+      title: "YVNS Instagram"
+      target: "_blank"
+  - link:
+      icon: "fa-brands fa-tiktok"
+      text: "TIKTOK"
+      url: "https://www.tiktok.com/@yvnsathletics"
+      alt: "YVNS TikTok"
+      title: "YVNS TikTok"
+      target: "_blank"
+  - link:
+      icon: "fa-solid fa-music"
+      text: "REQUIRES SACRIFICE // AUDIO"
+      url: "#" # PASTE YOUR SPOTIFY/APPLE MUSIC LINK HERE LATER
+      alt: "Gym Playlist"
+      title: "Gym Playlist"
+      target: "_blank"
 
 # List of social media links (The little icons at the bottom)
 socials:
   - social:
-      icon: "fa-brands fa-instagram"
-      url: "https://instagram.com/" 
-      title: "Instagram"
-      alt: "Instagram"
+      icon: "fa-solid fa-envelope"
+      url: "mailto:support@yvnsathletics.com"
+      title: "Email Support"
+      alt: "Email Support"
       target: "_blank"
   - social:
-      icon: "fa-solid fa-envelope"
-      url: "mailto:contact@yvns.com" 
-      title: "Email"
-      alt: "Email"
+      icon: "fa-solid fa-comment-sms"
+      url: "sms:+14842732465" 
+      title: "Text Us"
+      alt: "Text Us"
       target: "_blank"
 
 # Footer text
 footer: >
-  Do the work.
+  YOUR VICTORY NEEDS SACRIFICE.
 
 # Footer copyright message
 copyright: >
-  © 2026 YVNS Athletics./linkyee" target="_blank">linkyee</a>
+  © 2026 YVNS Athletics.
