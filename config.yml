@@ -19,6 +19,13 @@ tagline: >-
 # List of links (Your main buttons)
 links:
   - link:
+      icon: "fa-solid fa-lock"
+      text: "FOUNDER'S REWARD" 
+      url: "https://yvnsathletics.com/pages/founders-reward"
+      alt: "Founder Reward"
+      title: "Founder Reward"
+      target: "_blank"
+  - link:
       icon: "fa-solid fa-cart-shopping"
       text: "FOUNDER'S COLLECTION" 
       url: "https://yvnsathletics.com/"
