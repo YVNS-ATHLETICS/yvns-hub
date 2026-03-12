@@ -142,3 +142,14 @@ a {
   font-size: 9px !important;
   color: #333333 !important;
 }
+
+/* ESTABLISHED DATE SUB-TAG */
+.description::after {
+  content: "EST. MMXXVI";
+  display: block;
+  margin-top: 8px;
+  font-size: 9px; 
+  letter-spacing: 2px;
+  color: #81D4FA; 
+  opacity: 0.7; 
+}
