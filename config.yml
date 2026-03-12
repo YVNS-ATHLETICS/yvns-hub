@@ -26,6 +26,13 @@ links:
       title: "Founder Reward"
       target: "_blank"
   - link:
+      icon: "fa-solid fa-mobile-screen"
+      text: "YVNS.LOG WAITLIST" 
+      url: "https://yvnsathletics.com/pages/tracker-waitlist"
+      alt: "Tracker App Waitlist"
+      title: "Tracker App Waitlist"
+      target: "_blank"
+  - link:
       icon: "fa-solid fa-cart-shopping"
       text: "FOUNDER'S COLLECTION" 
       url: "https://yvnsathletics.com/"
