@@ -1,5 +1,11 @@
-/* RESET & FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:wght@400;500;700&display=swap');
+/* =========================================
+   YVNS ATHLETICS — V2 HUB
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap');
+
+
+/* RESET */
 
 * {
   margin: 0;
@@ -7,149 +13,565 @@
   box-sizing: border-box;
 }
 
-/* YVNS APP UI (SCALED & HARDCODED) */
+html {
+  background: #050505;
+}
+
 body {
-  background-color: #1A1A1A !important;
-  color: #ffffff !important;
+  position: relative;
+
+  min-height: 100vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+
+  padding: 42px 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255,255,255,.035),
+      transparent 36%
+    ),
+    #050505;
+
+  color: #ffffff;
+
   text-align: center;
-  padding: 30px 0;
-  font-family: 'Roboto Mono', monospace !important;
+
+  font-family: 'Manrope', sans-serif !important;
+
+  overflow-x: hidden;
 }
+
+
+/* SUBTLE GRAIN */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+  z-index: 999;
+
+  opacity: .045;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='.6'/%3E%3C/svg%3E");
+
+  mix-blend-mode: soft-light;
+}
+
+
+/* LINKS */
 
 a {
   text-decoration: none;
-  transition: all 0.2s ease;
+  color: inherit;
+
+  transition:
+    color .2s ease,
+    background .2s ease,
+    border-color .2s ease,
+    transform .2s ease,
+    opacity .2s ease;
 }
+
+
+/* MAIN WRAPPER */
 
 .container {
-  width: 90%;
-  max-width: 400px; /* Thinner layout for mobile */
+  position: relative;
+  z-index: 2;
+
+  width: calc(100% - 36px);
+  max-width: 430px;
+
+  margin: 0 auto;
 }
 
-/* PROFILE HEADER */
+
+/* =========================================
+   PROFILE HEADER
+   ========================================= */
+
 .profile-pic {
-  width: 90px; /* Shrunk down */
-  height: 90px;
-  border-radius: 50%;
+  width: 82px;
+  height: 82px;
+
   object-fit: cover;
-  margin-bottom: 12px;
-  border: 1px solid #333333;
+
+  margin-bottom: 18px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,255,255,.14);
+
+  background: #000;
+
+  box-shadow:
+    0 0 0 5px rgba(255,255,255,.018),
+    0 14px 40px rgba(0,0,0,.5);
 }
+
 
 .name {
-  font-family: 'Bebas Neue', Impact, sans-serif !important; /* Forced athletic font */
-  font-size: 32px !important; /* Shrunk down */
-  letter-spacing: 2px !important;
-  text-transform: uppercase !important;
-  margin: 10px 0 2px 0 !important;
-  color: #ffffff !important;
-}
+  margin: 4px 0 4px !important;
 
-/* Formatted like the "STATUS: ACTIVE" website text */
-.description {
-  font-family: 'Roboto Mono', monospace !important; 
-  font-size: 11px !important; 
-  color: #81D4FA !important; 
+  font-family: 'Bebas Neue', Impact, sans-serif !important;
+
+  font-size: 38px !important;
+  font-weight: 400 !important;
+
+  line-height: 1 !important;
+
   letter-spacing: 1.5px !important;
   text-transform: uppercase !important;
-  margin-bottom: 30px !important;
-  font-weight: 500 !important;
+
+  color: #f5f5f5 !important;
 }
 
-/* MAIN BUTTONS */
+
+/* CORE MOTTO */
+
+.description {
+  margin-top: 13px !important;
+  margin-bottom: 34px !important;
+
+  font-family: 'Manrope', sans-serif !important;
+
+  font-size: 10px !important;
+  font-weight: 700 !important;
+
+  line-height: 1.5 !important;
+
+  letter-spacing: 2.2px !important;
+  text-transform: uppercase !important;
+
+  color: #c6c6c6 !important;
+}
+
+
+/* ESTABLISHED DATE */
+
+.description::after {
+  content: "EST. MMXXVI";
+
+  display: block;
+
+  margin-top: 9px;
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 2.4px;
+
+  color: #5f5f5f;
+
+  opacity: 1;
+}
+
+
+/* =========================================
+   MAIN LINKS
+   ========================================= */
+
 .links {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+
+  gap: 10px;
 }
+
+
+/* BUTTON */
 
 .link-button {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 58px;
+
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background-color: #050505 !important;
-  border: 1px solid #333333 !important; /* Thinner tech border */
-  color: #ffffff !important;
+  justify-content: flex-start;
+
+  gap: 16px;
+
+  padding: 15px 20px !important;
+
+  overflow: hidden;
+
+  background: #0a0a0a !important;
+
+  border: 1px solid rgba(255,255,255,.12) !important;
+
+  border-radius: 0 !important;
+
+  color: #eeeeee !important;
+
   font-family: 'Bebas Neue', Impact, sans-serif !important;
-  font-size: 18px !important; /* Shrunk down */
-  letter-spacing: 1.5px !important;
-  padding: 14px !important; /* Slimmer button height */
-  border-radius: 2px !important; /* Sharper, industrial edges */
-  transition: all 0.2s ease-in-out !important;
+
+  font-size: 20px !important;
+  font-weight: 400 !important;
+
+  line-height: 1 !important;
+
+  letter-spacing: 1.3px !important;
+
+  text-align: left !important;
+
+  transition:
+    background .2s ease,
+    border-color .2s ease,
+    color .2s ease,
+    transform .2s ease !important;
 }
+
+
+/* ICON */
+
+.link-button i {
+  width: 24px;
+
+  flex-shrink: 0;
+
+  text-align: center;
+
+  font-size: 17px;
+
+  color: #777777 !important;
+
+  transition:
+    color .2s ease,
+    transform .2s ease;
+}
+
+
+/* SMALL RED ACCENT */
+
+.link-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 2px;
+  height: 100%;
+
+  background: #C62828;
+
+  transform: scaleY(0);
+
+  transform-origin: bottom;
+
+  transition: transform .22s ease;
+}
+
+
+/* SUBTLE ARROW */
+
+.link-button::after {
+  content: "→";
+
+  margin-left: auto;
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #474747;
+
+  transition:
+    color .2s ease,
+    transform .2s ease;
+}
+
+
+/* HOVER */
 
 .link-button:hover {
-  background-color: #81D4FA !important;
-  border-color: #81D4FA !important;
-  color: #000000 !important;
-  box-shadow: 0 0 15px rgba(129, 212, 250, 0.2) !important;
-  transform: translateY(-2px) !important;
+  background: #101010 !important;
+
+  border-color: rgba(255,255,255,.28) !important;
+
+  color: #ffffff !important;
+
+  transform: translateY(-1px) !important;
+
+  box-shadow: none !important;
 }
+
+
+.link-button:hover::before {
+  transform: scaleY(1);
+}
+
+
+.link-button:hover::after {
+  color: #ffffff;
+
+  transform: translateX(3px);
+}
+
 
 .link-button:hover i {
-  color: #000000 !important;
+  color: #C62828 !important;
+
+  transform: scale(1.05);
 }
 
-/* SOCIAL ICONS */
+
+/* =========================================
+   SOCIAL / CONTACT ICONS
+   ========================================= */
+
 .button-container {
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+
+  margin-top: 28px;
 }
+
 
 .button-group {
   display: flex;
-  gap: 15px;
+
+  gap: 10px;
 }
 
+
 .icon-button {
-  width: 35px; /* Shrunk down */
-  height: 35px;
+  width: 42px;
+  height: 42px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  background: none !important;
-  border: none !important;
+
+  background: transparent !important;
+
+  border: 1px solid rgba(255,255,255,.10) !important;
+
+  border-radius: 50% !important;
+
   cursor: pointer;
-  color: #81D4FA !important; 
-  font-size: 20px !important; /* Shrunk down */
-  transition: all 0.2s ease !important;
+
+  color: #777777 !important;
+
+  font-size: 16px !important;
+
+  transition:
+    color .2s ease,
+    border-color .2s ease,
+    background .2s ease,
+    transform .2s ease !important;
 }
+
 
 .icon-button:hover {
   color: #ffffff !important;
-  transform: scale(1.1) !important;
-  filter: drop-shadow(0 0 8px rgba(129, 212, 250, 0.5)) !important;
+
+  border-color: rgba(198,40,40,.75) !important;
+
+  background: rgba(198,40,40,.06) !important;
+
+  transform: translateY(-2px) !important;
+
+  filter: none !important;
 }
 
-/* FOOTER TEXT */
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
 .footer {
-  margin-top: 35px !important;
-  font-size: 10px !important;
-  color: #555555 !important;
-  letter-spacing: 1.5px !important;
+  position: relative;
+
+  margin-top: 42px !important;
+  padding-top: 23px;
+
+  font-family: 'Manrope', sans-serif !important;
+
+  font-size: 8px !important;
+  font-weight: 600 !important;
+
+  line-height: 1.6 !important;
+
+  letter-spacing: 2px !important;
   text-transform: uppercase !important;
-  font-family: 'Roboto Mono', monospace !important;
+
+  color: #626262 !important;
 }
+
+
+.footer::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 44px;
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background: #C62828;
+
+  opacity: .7;
+}
+
 
 .copyright {
   margin-top: 10px !important;
-  font-size: 9px !important;
-  color: #333333 !important;
+
+  font-family: 'Manrope', sans-serif !important;
+
+  font-size: 8px !important;
+
+  letter-spacing: 1.4px !important;
+
+  color: #353535 !important;
 }
 
-/* ESTABLISHED DATE SUB-TAG */
-.description::after {
-  content: "EST. MMXXVI";
-  display: block;
-  margin-top: 8px;
-  font-size: 9px; 
-  letter-spacing: 2px;
-  color: #81D4FA; 
-  opacity: 0.7; 
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  body {
+    align-items: flex-start;
+
+    padding: 30px 0 38px;
+  }
+
+
+  .container {
+    width: calc(100% - 30px);
+    max-width: 410px;
+  }
+
+
+  .profile-pic {
+    width: 74px;
+    height: 74px;
+
+    margin-bottom: 15px;
+  }
+
+
+  .name {
+    font-size: 34px !important;
+  }
+
+
+  .description {
+    margin-top: 11px !important;
+    margin-bottom: 29px !important;
+
+    font-size: 9px !important;
+
+    letter-spacing: 1.8px !important;
+  }
+
+
+  .description::after {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .links {
+    gap: 9px;
+  }
+
+
+  .link-button {
+    min-height: 55px;
+
+    padding: 14px 17px !important;
+
+    gap: 14px;
+
+    font-size: 19px !important;
+  }
+
+
+  .link-button i {
+    width: 22px;
+
+    font-size: 16px;
+  }
+
+
+  .link-button::after {
+    font-size: 12px;
+  }
+
+
+  .button-container {
+    margin-top: 24px;
+  }
+
+
+  .icon-button {
+    width: 40px;
+    height: 40px;
+
+    font-size: 15px !important;
+  }
+
+
+  .footer {
+    margin-top: 36px !important;
+
+    padding-top: 20px;
+
+    font-size: 7.5px !important;
+
+    letter-spacing: 1.7px !important;
+  }
+
+
+  .copyright {
+    font-size: 7px !important;
+  }
+
+}
+
+
+/* =========================================
+   DESKTOP
+   ========================================= */
+
+@media (min-width: 900px) {
+
+  .container {
+    max-width: 470px;
+  }
+
+
+  .link-button {
+    min-height: 62px;
+
+    font-size: 21px !important;
+
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
 }
