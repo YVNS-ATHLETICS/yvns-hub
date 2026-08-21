@@ -6,46 +6,42 @@ plugins: []
 # HTML Title
 title: "YVNS Athletics | Victory Hub"
 
-# Avatar image path (Pulls your GitHub profile picture)
+# Avatar image path
 avatar: "https://github.com/yvns-athletics.png"
 
 # Name section text
 name: "YVNS ATHLETICS"
 
-# Tagline section text
+# Main brand motto
 tagline: >-
   YOUR VICTORY NEEDS SACRIFICE.
 
-# List of links (Your main buttons)
+# Main links
 links:
   - link:
-      icon: "fa-solid fa-lock"
-      text: "FOUNDER'S REWARD" 
-      url: "https://yvnsathletics.com/pages/founders-reward"
-      alt: "Founder Reward"
-      title: "Founder Reward"
+      icon: "fa-solid fa-bag-shopping"
+      text: "SHOP YVNS"
+      url: "https://yvnsathletics.com"
+      alt: "Shop YVNS Athletics"
+      title: "Shop YVNS Athletics"
       target: "_blank"
+
   - link:
-      icon: "fa-solid fa-mobile-screen"
-      text: "YVNS.LOG WAITLIST" 
-      url: "https://yvnsathletics.com/pages/tracker-waitlist"
-      alt: "Tracker App Waitlist"
-      title: "Tracker App Waitlist"
+      icon: "fa-solid fa-shirt"
+      text: "UNBROKEN COLLECTION"
+      url: "https://yvnsathletics.com/collections/unbroken-collection"
+      alt: "Unbroken Collection"
+      title: "Unbroken Collection"
       target: "_blank"
+
   - link:
-      icon: "fa-solid fa-cart-shopping"
-      text: "FOUNDER'S COLLECTION" 
-      url: "https://yvnsathletics.com/"
-      alt: "YVNS Website"
-      title: "YVNS Website"
+      icon: "fa-solid fa-bullseye"
+      text: "OUR MISSION"
+      url: "https://yvnsathletics.com/pages/the-mission"
+      alt: "YVNS Mission"
+      title: "YVNS Mission"
       target: "_blank"
-  - link:
-      icon: "fa-solid fa-clipboard-list"
-      text: "THE ALPHA SURVEY"
-      url: "https://yvns-athletics.github.io/yvns-intel/"
-      alt: "YVNS App Survey"
-      title: "YVNS App Survey"
-      target: "_blank"
+
   - link:
       icon: "fa-brands fa-instagram"
       text: "INSTAGRAM"
@@ -53,6 +49,7 @@ links:
       alt: "YVNS Instagram"
       title: "YVNS Instagram"
       target: "_blank"
+
   - link:
       icon: "fa-brands fa-tiktok"
       text: "TIKTOK"
@@ -60,15 +57,8 @@ links:
       alt: "YVNS TikTok"
       title: "YVNS TikTok"
       target: "_blank"
-  - link:
-      icon: "fa-solid fa-music"
-      text: "VICTORY PLAYLIST"
-      url: "#" # PASTE YOUR SPOTIFY/APPLE MUSIC LINK HERE LATER
-      alt: "Gym Playlist"
-      title: "Gym Playlist"
-      target: "_blank"
 
-# List of social media links (The little icons at the bottom)
+# Contact icons
 socials:
   - social:
       icon: "fa-solid fa-envelope"
@@ -76,16 +66,17 @@ socials:
       title: "Email Support"
       alt: "Email Support"
       target: "_blank"
+
   - social:
       icon: "fa-solid fa-comment-sms"
-      url: "sms:+14842732465" 
+      url: "sms:+14842732465"
       title: "Text Us"
       alt: "Text Us"
       target: "_blank"
 
 # Footer text
 footer: >
-  FORGED BY DISCIPLINE, BUILT THROUGH SACRIFICE.
+  ANY AGE. ANY STRUGGLE. STILL IN IT.
 
 # Footer copyright message
 copyright: >
